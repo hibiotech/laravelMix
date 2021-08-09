@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PublicController extends Controller
+class HomeController extends Controller
 {
     /**
      * Our custom service provider is going to make sure
@@ -13,6 +13,6 @@ class PublicController extends Controller
     public function index()
     {
         // of app.blade.php
-        return view('public');
+        return view('home');
     }
 }
