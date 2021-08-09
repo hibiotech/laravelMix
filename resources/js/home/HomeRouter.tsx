@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import { About } from "./pages/About";
+import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 
-interface Props {}
+interface Props { }
 
-export const PublicRouter = (props: Props) => {
+export const HomeRouter = (props: Props) => {
     return (
         <Router>
             <div>
@@ -30,18 +32,10 @@ export const PublicRouter = (props: Props) => {
               renders the first one that matches the current URL. */}
                 <Switch>
                     <Route exact path="/">
-                        <div>
-                            <h1>HOME of Public</h1>
-                        </div>
+                        <Home></Home>
                     </Route>
                     <Route path="/about">
-                        <div>
-                            <h1>ABOUT Public</h1>
-                            <p>
-                                Should always be a public page, like seo pages
-                                and more
-                            </p>
-                        </div>
+                        <About></About>
                     </Route>
 
                     <Route path="/login">
