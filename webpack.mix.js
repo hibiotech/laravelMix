@@ -14,16 +14,18 @@ const LiveReloadPlugin = require("webpack-livereload-plugin");
 
 mix.ts("resources/js/app.tsx", "public/js").react();
 
-mix.ts("resources/js/public.tsx", "public/js").react();
+mix.ts("resources/js/home.tsx", "public/js").react();
 
 mix.ts("resources/js/admin.tsx", "public/js").react();
 
-// mix.js('resources/js/app.js', 'public/js')
-//     .postCss('resources/css/app.css', 'public/css', [
-//         //
-//     ]);
+// Sharing sass for now...
+mix.sass('resources/css/index.scss', 'public/css/index.css');
+
+
 
 mix.webpackConfig({
     plugins: [new LiveReloadPlugin()]
 });
 
+
+mix.disableSuccessNotifications();

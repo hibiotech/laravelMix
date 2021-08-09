@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AppController;
-use App\Http\Controllers\PublicController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +21,9 @@ Route::get('/welcome', function () {
 });
 
 // Public routes needs to be defined as exact routes
-Route::get('/', [PublicController::class, 'index']);
-Route::get('/about', [PublicController::class, 'index']);
-Route::get('/login', [PublicController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about', [HomeController::class, 'index']);
+Route::get('/login', [HomeController::class, 'index']);
 
 // Can seperate admin pages from the app
 Route::middleware('auth:sanctum')->get('/admin{any}', [AdminController::class, 'index'])->where('any', '.*');
