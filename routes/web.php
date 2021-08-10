@@ -25,10 +25,10 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'index']);
 Route::get('/login', [HomeController::class, 'index']);
 
-// Can seperate admin pages from the app
-Route::middleware('auth:sanctum')->get('/admin{any}', [AdminController::class, 'index'])->where('any', '.*');
+// // Can seperate admin pages from the app
+// Route::middleware('auth:sanctum')->get('/admin{any}', [AdminController::class, 'index'])->where('any', '.*');
 
-// All app routes will be reached here
-Route::middleware('auth:sanctum')->get('/{any}', [AppController::class, 'index'])->where('any', '.*');
+// // All app routes will be reached here
+// Route::middleware('auth:sanctum')->get('/{any}', [AppController::class, 'index'])->where('any', '.*');
 
 

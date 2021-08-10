@@ -1,6 +1,11 @@
 const mix = require("laravel-mix");
 const LiveReloadPlugin = require("webpack-livereload-plugin");
 
+/* Allow multiple Laravel Mix applications*/
+require("laravel-mix-merge-manifest");
+mix.mergeManifest();
+/*----------------------------------------*/
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -19,13 +24,10 @@ mix.ts("resources/js/home.tsx", "public/js").react();
 mix.ts("resources/js/admin.tsx", "public/js").react();
 
 // Sharing sass for now...
-mix.sass('resources/css/index.scss', 'public/css/index.css');
-
-
+mix.sass("resources/css/index.scss", "public/css/index.css");
 
 mix.webpackConfig({
-    plugins: [new LiveReloadPlugin()]
+    plugins: [new LiveReloadPlugin()],
 });
-
 
 mix.disableSuccessNotifications();
