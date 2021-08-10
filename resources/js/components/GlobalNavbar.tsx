@@ -17,22 +17,29 @@ export const GlobalNavbar = (props: Props) => {
 
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="#home" className="text-light">
+                        React-Bootstrap
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             {props.links.map((l) => {
                                 if (l.direct) {
                                     return (
-                                        <Nav.Link key={l.to} href={l.to}>
+                                        <Nav.Link
+                                            className="text-light"
+                                            key={l.to}
+                                            href={l.to}
+                                        >
                                             {l.name}
                                         </Nav.Link>
                                     );
                                 } else {
                                     return (
                                         <Nav.Link
+                                            className="text-light"
                                             key={l.to}
                                             as={Link}
                                             to={l.to}
