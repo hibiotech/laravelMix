@@ -39,11 +39,13 @@ return [
             'assets/js/bootstrap' => 'Resources/assets/js/bootstrap.js',
             'assets/js/app/index' => 'Resources/assets/js/app/index.tsx',
             'assets/js/app/components/App' => 'Resources/assets/js/app/components/App.tsx',
-
-
+            'assets/js/app/components/Router' => 'Resources/assets/js/app/pages/Router.tsx',
+            'assets/js/app/pages/Page1' => 'Resources/assets/js/app/pages/Page1.tsx',
+            'assets/js/app/pages/Page2' => 'Resources/assets/js/app/pages/Page2.tsx',
+            
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
-            'webpack' => 'webpack.mix.js',
-            'package' => 'package.json',
+            // 'webpack' => 'webpack.mix.js',
+            // 'package' => 'package.json',
         ],
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],

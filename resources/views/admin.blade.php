@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@include('_head')
+<head>
+    @include('_head')
+</head>
 
 <body class="antialiased">
     <div id="admin"></div>
