@@ -1,0 +1,41 @@
+import React, { useState } from "react";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+
+import Page1 from "../pages/Page1";
+import Page2 from "../pages/Page2";
+
+export const AppRouter = () => {
+    return (
+        <Router basename="/demo">
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            {/* Navigate between apps */}
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <Link to="/page1">Demo Page1</Link>
+                        </li>
+                        <li>
+                            <Link to="/page2">Demo Page2</Link>
+                        </li>
+                    </ul>
+                </nav>
+
+                {/* A <Switch> looks through its children <Route>s and
+  renders the first one that matches the current URL. */}
+                <Switch>
+                    <Route path="/page1">
+                        <Page1></Page1>
+                    </Route>
+                    <Route path="/page2">
+                        <Page2></Page2>
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
+};
+
+export default AppRouter;
