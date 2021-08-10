@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AppController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +28,3 @@ Route::get('/login', [HomeController::class, 'index']);
 
 // // All app routes will be reached here
 // Route::middleware('auth:sanctum')->get('/{any}', [AppController::class, 'index'])->where('any', '.*');
-
-

@@ -32,7 +32,7 @@ mix.mergeManifest();
  |
  */
 
-// mix.ts("resources/js/app.tsx", "public/js").react();
+mix.ts("resources/js/app.tsx", "public/js").react();
 
 // Sharing sass for now...
 mix.sass("resources/css/index.scss", "public/css/index.css");

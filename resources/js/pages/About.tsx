@@ -1,16 +1,16 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-export const Page1 = () => {
+export const About = () => {
     return (
         <Container>
             <Row>
                 <Col>
-                    <h1>Test $LOWER_NAME$1!</h1>
+                    <h1>About</h1>
                 </Col>
             </Row>
         </Container>
     );
 };
 
-export default Page1;
+export default About;

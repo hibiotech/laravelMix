@@ -1,34 +1,31 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import {
-    GlobalNavbar,
-    LinkItem,
-} from "../../../../../../../resources/js/components/GlobalNavbar";
-
-import Page1 from "../pages/Page1";
-import Page2 from "../pages/Page2";
+import Home from "../pages/Home";
+import About from "../pages/About";
+import { GlobalNavbar, LinkItem } from "./GlobalNavbar";
 
 // should come from some where else...
 const links: LinkItem[] = [
-    { name: "Home", to: "/", direct: true },
-    { name: "Demo Page1", to: "/page1", direct: false },
-    { name: "Demo Page2", to: "/page2", direct: false },
+    { name: "Home", to: "/", direct: false },
+    { name: "About", to: "/about", direct: false },
+
+    { name: "Demo Page", to: "/demo/page1", direct: true },
 ];
 
 export const AppRouter = () => {
     return (
-        <Router basename="/$LOWER_NAME$">
+        <Router basename="/">
             <div>
                 <GlobalNavbar links={links}></GlobalNavbar>
 
                 {/* A <Switch> looks through its children <Route>s and
   renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/page1">
-                        <Page1></Page1>
+                    <Route path="/about">
+                        <About></About>
                     </Route>
-                    <Route path="/page2">
-                        <Page2></Page2>
+                    <Route path="/">
+                        <Home></Home>
                     </Route>
                 </Switch>
             </div>

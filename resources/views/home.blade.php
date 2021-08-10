@@ -4,8 +4,8 @@
 @include('_head')
 
 <body class="antialiased">
-    <div id="public"></div>
-    <script src="{{ asset('js/home.js') }}"></script>
+    <div id="app"></div>
+    <script src="{{ asset('js/app.js') }}"></script>
     @env('local')
     <script src="http://localhost:35729/livereload.js"></script>
     @endenv

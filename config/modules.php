@@ -46,13 +46,19 @@ return [
             'assets/js/app/pages/Page2' => 'Resources/assets/js/app/pages/Page2.tsx',
 
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
-            // 'webpack' => 'webpack.mix.js',
-            // 'package' => 'package.json',
+            'webpack' => 'webpack.mix.js',
+            'package' => 'package.json',
         ],
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
             'routes/api' => ['LOWER_NAME'],
             'webpack' => ['LOWER_NAME'],
+
+            'assets/js/app/components/App' => ['LOWER_NAME'],
+            'assets/js/app/components/AppRouter' => ['LOWER_NAME'],
+            'assets/js/app/pages/Page1' => ['LOWER_NAME'],
+            'assets/js/app/pages/Page2' => ['LOWER_NAME'],
+
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
             'views/index' => ['LOWER_NAME'],
             'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
