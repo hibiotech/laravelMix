@@ -34,7 +34,13 @@ return [
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
             'composer' => 'composer.json',
-            'assets/js/app' => 'Resources/assets/js/app.js',
+
+            'assets/js/app' => 'Resources/assets/js/app.tsx',
+            'assets/js/bootstrap' => 'Resources/assets/js/bootstrap.js',
+            'assets/js/app/index' => 'Resources/assets/js/app/index.tsx',
+            'assets/js/app/components/App' => 'Resources/assets/js/app/components/App.tsx',
+
+
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
             'webpack' => 'webpack.mix.js',
             'package' => 'package.json',
