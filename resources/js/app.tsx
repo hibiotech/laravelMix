@@ -1,3 +1,3 @@
 require('./bootstrap');
 
-require('./app/index');
+require('./index');
