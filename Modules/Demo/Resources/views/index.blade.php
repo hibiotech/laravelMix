@@ -1,5 +1,5 @@
 @extends('demo::layouts.master')
 
 @section('content')
-    <div id="app"></div>
+    <div id="demo"></div>
 @endsection

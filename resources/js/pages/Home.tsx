@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel, Col, Container, Row, Image, Card } from "react-bootstrap";
 import { LoremIpsum, loremIpsum } from "react-lorem-ipsum";
 import { GlobalFooter } from "../components/GlobalFooter";
+import { useHolderjs } from "../hooks/useHolderjs";
 
 const CarouselBanner = () => {
     return (
@@ -9,7 +10,7 @@ const CarouselBanner = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=First slide&bg=373940"
+                    data-src="holder.js/800x400?text=First slide&bg=373940"
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -23,7 +24,7 @@ const CarouselBanner = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=Second slide&bg=282c34"
+                    data-src="holder.js/800x400?text=Second slide&bg=282c34"
                     alt="Second slide"
                 />
 
@@ -37,7 +38,7 @@ const CarouselBanner = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="holder.js/800x400?text=Third slide&bg=20232a"
+                    data-src="holder.js/800x400?text=Third slide&bg=20232a"
                     alt="Third slide"
                 />
 
@@ -55,49 +56,32 @@ const CarouselBanner = () => {
 
 const RoundedCircleSection = () => {
     return (
-        <Container fluid>
-            <Row className="justify-content-md-center">
-                <Col
-                    className="p-4"
-                    style={{ textAlign: "center" }}
-                    sm="12"
-                    md="4"
-                >
-                    <h2>Heading</h2>
-                    <Image src="holder.js/171x180" roundedCircle />
+        <Row className="justify-content-md-center">
+            <Col className="p-4" style={{ textAlign: "center" }} sm="12" md="4">
+                <h2>Heading</h2>
+                <Image data-src="holder.js/171x180" roundedCircle />
 
-                    <div style={{ textAlign: "left" }}>
-                        <LoremIpsum p={1} />
-                    </div>
-                </Col>
-                <Col
-                    className="p-4"
-                    style={{ textAlign: "center" }}
-                    sm="6"
-                    md="4"
-                >
-                    <h2>Heading</h2>
-                    <Image src="holder.js/171x180" roundedCircle />
+                <div style={{ textAlign: "left" }}>
+                    <LoremIpsum p={1} />
+                </div>
+            </Col>
+            <Col className="p-4" style={{ textAlign: "center" }} sm="6" md="4">
+                <h2>Heading</h2>
+                <Image data-src="holder.js/171x180" roundedCircle />
 
-                    <div style={{ textAlign: "left" }}>
-                        <LoremIpsum p={1} />
-                    </div>
-                </Col>
-                <Col
-                    className="p-4"
-                    style={{ textAlign: "center" }}
-                    sm="6"
-                    md="4"
-                >
-                    <h2>Heading</h2>
-                    <Image src="holder.js/171x180" roundedCircle />
+                <div style={{ textAlign: "left" }}>
+                    <LoremIpsum p={1} />
+                </div>
+            </Col>
+            <Col className="p-4" style={{ textAlign: "center" }} sm="6" md="4">
+                <h2>Heading</h2>
+                <Image data-src="holder.js/171x180" roundedCircle />
 
-                    <div style={{ textAlign: "left" }}>
-                        <LoremIpsum p={1} />
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+                <div style={{ textAlign: "left" }}>
+                    <LoremIpsum p={1} />
+                </div>
+            </Col>
+        </Row>
     );
 };
 
@@ -145,29 +129,27 @@ const ProductsSection = () => {
 
 export const CardSection = () => {
     return (
-        <Container fluid>
-            <Row>
-                <Col>
-                    <Card className="bg-dark m-4">
-                        <Card.Img src="holder.js/100px270" alt="Card image" />
-                        <Card.ImgOverlay>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>{loremIpsum()}</Card.Text>
-                            <Card.Text>Last updated 3 mins ago</Card.Text>
-                        </Card.ImgOverlay>
-                    </Card>
+        <Row>
+            <Col>
+                <Card className="bg-dark m-4">
+                    <Card.Img data-src="holder.js/100px270" alt="Card image" />
+                    <Card.ImgOverlay>
+                        <Card.Title>Card title</Card.Title>
+                        <Card.Text>{loremIpsum()}</Card.Text>
+                        <Card.Text>Last updated 3 mins ago</Card.Text>
+                    </Card.ImgOverlay>
+                </Card>
 
-                    <Card className="bg-dark m-4">
-                        <Card.Img src="holder.js/100px270" alt="Card image" />
-                        <Card.ImgOverlay>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>{loremIpsum()}</Card.Text>
-                            <Card.Text>Last updated 3 mins ago</Card.Text>
-                        </Card.ImgOverlay>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+                <Card className="bg-dark m-4">
+                    <Card.Img data-src="holder.js/100px270" alt="Card image" />
+                    <Card.ImgOverlay>
+                        <Card.Title>Card title</Card.Title>
+                        <Card.Text>{loremIpsum()}</Card.Text>
+                        <Card.Text>Last updated 3 mins ago</Card.Text>
+                    </Card.ImgOverlay>
+                </Card>
+            </Col>
+        </Row>
     );
 };
 
@@ -177,7 +159,7 @@ const DarkerSection = () => {
             <Col>
                 <Row className="bg-dark text-light p-4 text-center">
                     <Col>
-                        <Image src="holder.js/171x180" roundedCircle />
+                        <Image data-src="holder.js/171x180" roundedCircle />
                     </Col>
                     <Col>
                         <h4>Heading</h4>
@@ -194,13 +176,22 @@ const DarkerSection = () => {
 };
 
 export const Home = () => {
+    useHolderjs();
+
     return (
         <>
             <CarouselBanner></CarouselBanner>
-            <RoundedCircleSection></RoundedCircleSection>
-            <ProductsSection></ProductsSection>
-            <DarkerSection></DarkerSection>
-            <CardSection></CardSection>
+
+            <Container fluid>
+                <RoundedCircleSection></RoundedCircleSection>
+
+                <ProductsSection></ProductsSection>
+
+                <DarkerSection></DarkerSection>
+
+                <CardSection></CardSection>
+            </Container>
+
             <GlobalFooter></GlobalFooter>
         </>
     );

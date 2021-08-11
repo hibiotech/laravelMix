@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import { GlobalFooter } from "../components/GlobalFooter";
 import { LoremIpsum, Avatar, fullname, username } from "react-lorem-ipsum";
+import { useHolderjs } from "../hooks/useHolderjs";
 
 const Company = () => {
     return (
@@ -38,7 +39,10 @@ const Company = () => {
                         md={6}
                         className="d-flex align-items-center justify-content-center"
                     >
-                        <Image src="holder.js/300x180" />
+                        <Image
+                            className="holder-js-img"
+                            data-src="holder.js/300x180"
+                        />
                     </Col>
                 </Row>
             </Col>
@@ -77,7 +81,7 @@ const DarkerSection = () => {
             <Col>
                 <Row className="bg-dark text-light p-4 text-center">
                     <Col>
-                        <Image src="holder.js/171x180" roundedCircle />
+                        <Image data-src="holder.js/171x180" roundedCircle />
                     </Col>
                     <Col>
                         <h4>Heading</h4>
@@ -94,6 +98,8 @@ const DarkerSection = () => {
 };
 
 export const About = () => {
+    useHolderjs();
+
     return (
         <>
             <Container>
@@ -101,7 +107,9 @@ export const About = () => {
                 <EmploysSection></EmploysSection>
             </Container>
 
-            <DarkerSection></DarkerSection>
+            <Container fluid>
+                <DarkerSection></DarkerSection>
+            </Container>
 
             <GlobalFooter></GlobalFooter>
         </>
