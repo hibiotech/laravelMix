@@ -8620,6 +8620,13 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-holderjs@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/use-holderjs/-/use-holderjs-0.0.4.tgz#db4d4e4248009ed0ea8d6945ab98f5f8566b3a8b"
+  integrity sha512-0CHYA/SLte9rzFjReX0hnkRfPyVxn2AFTj1bppCucJhjOYvFiztf6Jal9Roo7i75mqlmbz4DRtBqczifB6dJuQ==
+  dependencies:
+    holderjs "^2.9.9"
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/use/-/use-3.1.1.tgz"

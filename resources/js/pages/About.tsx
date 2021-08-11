@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import { GlobalFooter } from "../components/GlobalFooter";
 import { LoremIpsum, Avatar, fullname, username } from "react-lorem-ipsum";
-import { useHolderjs } from "../hooks/useHolderjs";
+import { useHolderjs } from "use-holderjs";
 
 const Company = () => {
     return (

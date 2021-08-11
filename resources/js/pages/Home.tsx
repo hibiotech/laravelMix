@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel, Col, Container, Row, Image, Card } from "react-bootstrap";
 import { LoremIpsum, loremIpsum } from "react-lorem-ipsum";
 import { GlobalFooter } from "../components/GlobalFooter";
-import { useHolderjs } from "../hooks/useHolderjs";
+import { useHolderjs } from "use-holderjs";
 
 const CarouselBanner = () => {
     return (
