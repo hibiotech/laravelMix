@@ -54,6 +54,7 @@ return [
             'routes/api' => ['LOWER_NAME'],
             'webpack' => ['LOWER_NAME'],
 
+            'assets/js/app/index' => ['LOWER_NAME'],
             'assets/js/app/components/App' => ['LOWER_NAME'],
             'assets/js/app/components/AppRouter' => ['LOWER_NAME'],
             'assets/js/app/pages/Page1' => ['LOWER_NAME'],
