@@ -11,8 +11,8 @@ import Page2 from "../pages/Page2";
 // should come from some where else...
 const links: LinkItem[] = [
     { name: "Home", to: "/", direct: true },
-    { name: "Demo Page1", to: "/page1", direct: false },
-    { name: "Demo Page2", to: "/page2", direct: false },
+    { name: "demo Page1", to: "/page1", direct: false },
+    { name: "demo Page2", to: "/page2", direct: false },
 ];
 
 export const AppRouter = () => {
