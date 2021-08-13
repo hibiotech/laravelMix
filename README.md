@@ -55,7 +55,7 @@ Start dev backend
 
 > ./vendor/bin/sail up
 
-Install js dependencies
+Install js dependencies and all modules dependencies
 
 > yarn
 

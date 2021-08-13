@@ -1,4 +1,6 @@
 {
+    "name": "react-laravel-mix-seed",
+    "version": "0.0.1",
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -20,6 +22,7 @@
         "@types/react-holder": "^1.0.34",
         "@types/react-router-dom": "^5.1.7",
         "axios": "^0.21",
+        "cross-env": "^7.0.3",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
@@ -33,7 +36,6 @@
     },
     "dependencies": {
         "bootstrap": "5.0.2",
-        "cross-env": "^7.0.3",
         "holderjs": "^2.9.9",
         "laravel-mix-merge-manifest": "^2.0.0",
         "node-sass": "^6.0.1",
@@ -45,5 +47,8 @@
         "react-router-bootstrap": "^0.25.0",
         "react-router-dom": "^5.2.0",
         "use-holderjs": "^0.0.8"
-    }
+    },
+    "workspaces":[
+        "Modules/*"
+    ]
 }

@@ -53,6 +53,7 @@ return [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
             'routes/api' => ['LOWER_NAME'],
             'webpack' => ['LOWER_NAME'],
+            'package' => ['LOWER_NAME'],
 
             'assets/js/app/index' => ['LOWER_NAME'],
             'assets/js/app/components/App' => ['LOWER_NAME'],
