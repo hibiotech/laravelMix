@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import App from "./components/App";
 
 // TODO: check if global theaming will overwrite this... else it needs to be removed.
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 if (document.getElementById('$LOWER_NAME$')) {
     render(<App />, document.getElementById("$LOWER_NAME$"));

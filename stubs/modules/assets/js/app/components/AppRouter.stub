@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import {
-    GlobalNavbar,
     LinkItem,
 } from "../../../../../../../resources/js/components/GlobalNavbar";
 
@@ -18,20 +17,16 @@ const links: LinkItem[] = [
 export const AppRouter = () => {
     return (
         <Router basename="/$LOWER_NAME$">
-            <div>
-                <GlobalNavbar links={links}></GlobalNavbar>
-
                 {/* A <Switch> looks through its children <Route>s and
   renders the first one that matches the current URL. */}
-                <Switch>
-                    <Route path="/page1">
-                        <Page1></Page1>
-                    </Route>
-                    <Route path="/page2">
-                        <Page2></Page2>
-                    </Route>
-                </Switch>
-            </div>
+            <Switch>
+                <Route path="/page1">
+                    <Page1></Page1>
+                </Route>
+                <Route path="/page2">
+                    <Page2></Page2>
+                </Route>
+            </Switch>
         </Router>
     );
 };

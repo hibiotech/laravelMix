@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
-import { GlobalFooter } from "../components/GlobalFooter";
 import { LoremIpsum, Avatar, fullname, username } from "react-lorem-ipsum";
 import { useHolderjs } from "use-holderjs";
+import { links } from "../components/AppRouter";
+import { Layout } from "../components/Layouts/_Default/Layout";
 
 const Company = () => {
     return (
@@ -101,7 +102,7 @@ export const About = () => {
     useHolderjs();
 
     return (
-        <>
+        <Layout links={links}>
             <Container>
                 <Company></Company>
                 <EmploysSection></EmploysSection>
@@ -110,9 +111,7 @@ export const About = () => {
             <Container fluid>
                 <DarkerSection></DarkerSection>
             </Container>
-
-            <GlobalFooter></GlobalFooter>
-        </>
+        </Layout>
     );
 };
 

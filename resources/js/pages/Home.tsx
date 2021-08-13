@@ -1,8 +1,9 @@
 import React from "react";
 import { Carousel, Col, Container, Row, Image, Card } from "react-bootstrap";
 import { LoremIpsum, loremIpsum } from "react-lorem-ipsum";
-import { GlobalFooter } from "../components/GlobalFooter";
 import { useHolderjs } from "use-holderjs";
+import { links } from "../components/AppRouter";
+import { Layout } from "../components/Layouts/_Default/Layout";
 
 const CarouselBanner = () => {
     return (
@@ -179,7 +180,7 @@ export const Home = () => {
     useHolderjs();
 
     return (
-        <>
+        <Layout links={links}>
             <CarouselBanner></CarouselBanner>
 
             <Container fluid>
@@ -191,9 +192,7 @@ export const Home = () => {
 
                 <CardSection></CardSection>
             </Container>
-
-            <GlobalFooter></GlobalFooter>
-        </>
+        </Layout>
     );
 };
 
